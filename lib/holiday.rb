@@ -77,34 +77,5 @@ def all_holidays_with_bbq(holiday_hash)
      holiday.map do |occasion, decorations|
        occasion if decorations.include?("BBQ")
      end
-end.flatten.compact
+   end.flatten.compact
 end
-
-
-#  holidays_with_bbqs = []
-#  holiday_hash.each do |season, holiday|
-#    holiday.each do |occasion, decorations|
-#      if decorations.include?("BBQ")
-#      holidays_with_bbqs <<  occasion
-#    end
-#  end
-#end
-#holidays_with_bbqs
-#end
-
-
-all_holidays_with_bbq({
-  :winter => {
-    :christmas => ["Lights", "Wreath"],
-    :new_years => ["Party Hats"]
-  },
-  :summer => {
-    :fourth_of_july => ["Fireworks", "BBQ"]
-  },
-  :fall => {
-    :thanksgiving => ["Turkey"]
-  },
-  :spring => {
-    :memorial_day => ["BBQ"]
-  }
-})
