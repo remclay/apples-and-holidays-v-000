@@ -28,7 +28,7 @@ holiday_hash.each do |season, holiday|
     season_string = season.to_s
     puts "#{season_string.capitalize}:"
     holiday.each do |holiday, decoration|
-      puts "  #{holiday.to_s.split('_').each {|word| word.capitalize!}.join(" ")}: #{decoration.join(", ")}"
+      puts "  #{holiday.to_s.split('_').each {|n| n.capitalize!}.join(" ")}: #{decoration.join(", ")}"
     end
   end
 end
