@@ -78,6 +78,7 @@ def all_holidays_with_bbq(holiday_hash)
        occasion if decorations.include?("BBQ")
      end
 end
+compact
 end
 
 
