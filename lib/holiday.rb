@@ -77,8 +77,7 @@ def all_holidays_with_bbq(holiday_hash)
      holiday.map do |occasion, decorations|
        occasion if decorations.include?("BBQ")
      end
-end
-compact
+end.compact
 end
 
 
