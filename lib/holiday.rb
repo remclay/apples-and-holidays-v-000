@@ -27,16 +27,16 @@ def all_supplies_in_holidays(holiday_hash)
 holiday_hash.each do |season, holiday|
     season_string = season.to_s
     puts "#{season_string.capitalize}:"
-    holiday.each do |holiday, decoration|
-      puts "  #{holiday.to_s.split('_').each {|n| n.capitalize!}.join(" ")}: #{decoration.join(", ")}"
+    holiday.each do |holiday, supply|
+      puts "  #{holiday.to_s.split('_').each {|n| n.capitalize!}.join(" ")}: #{supply.join(", ")}"
     end
   end
 end
 
 def all_holidays_with_bbq(holiday_hash)
   holiday_hash.map do |season, holiday|
-     holiday.map do |occasion, decorations|
-       occasion if decorations.include?("BBQ")
+     holiday.map do |occasion, supplies|
+       occasion if supplies.include?("BBQ")
      end
    end.flatten.compact
 end
